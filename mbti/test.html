@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>اختبار MBTI للناشئين</title>
 
 <style>
   body {
     font-family: "Tajawal", sans-serif;
     margin: 0;
-    background: #fafafa;
-    color: #222;
+    background: #fff9e6;
+    color: #333;
   }
 
   header {
-    background: linear-gradient(135deg, #6a5af9, #8f7bff);
+    background: linear-gradient(135deg, #ffb347, #ffcc33);
     padding: 25px;
-    color: white;
+    color: #222;
     text-align: center;
     border-radius: 0 0 25px 25px;
   }
@@ -24,50 +24,72 @@
   nav {
     display: flex;
     justify-content: center;
-    gap: 25px;
-    margin-top: 15px;
+    gap: 20px;
     flex-wrap: wrap;
+    margin-top: 15px;
   }
 
   nav a {
-    color: white;
+    color: #222;
     text-decoration: none;
     font-weight: bold;
     padding: 8px 14px;
     border-radius: 8px;
+    background: rgba(255,255,255,0.6);
     transition: 0.3s;
   }
 
   nav a:hover {
-    background: rgba(255,255,255,0.2);
+    background: #ffe08a;
   }
 
-  .section {
-    padding: 40px 20px;
-    max-width: 900px;
+  .container {
+    max-width: 700px;
     margin: auto;
+    padding: 30px 20px;
   }
 
-  .title {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-
-  .subtitle {
-    font-size: 18px;
-    color: #555;
-    text-align: center;
+  .question {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     margin-bottom: 25px;
   }
 
-  .btn-main {
+  .question h3 {
+    margin-bottom: 15px;
+  }
+
+  .option {
+    background: #ffefc2;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .option:hover {
+    background: #ffe08a;
+  }
+
+  #result {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff3cd;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 20px;
+    display: none;
+  }
+
+  .btn {
     display: block;
     width: fit-content;
-    margin: 20px auto;
-    background: #6a5af9;
-    color: white;
+    margin: 25px auto;
+    background: #ffb347;
+    color: #222;
     padding: 12px 22px;
     border-radius: 10px;
     text-decoration: none;
@@ -75,36 +97,8 @@
     transition: 0.3s;
   }
 
-  .btn-main:hover {
-    background: #5848d8;
-  }
-
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-  }
-
-  .card {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    text-align: center;
-  }
-
-  footer {
-    background: #222;
-    color: white;
-    padding: 30px;
-    margin-top: 40px;
-    text-align: center;
-  }
-
-  footer a {
-    color: #b8b8ff;
-    text-decoration: none;
+  .btn:hover {
+    background: #ff9800;
   }
 </style>
 </head>
@@ -112,72 +106,83 @@
 <body>
 
 <header>
-  <h1>ابدأ الاختبار</h1>
-  <p>اكتشف نمط شخصيتك في 5 دقائق</p>
+  <h1>اختبار MBTI للناشئين</h1>
+  <p>4 أسئلة فقط — اكتشف نمط شخصيتك بسرعة!</p>
 
   <nav>
     <a href="index.html">الرئيسية</a>
-    <a href="mbti.html">ابدأ الاختبار</a>
-    <a href="types.html">عالم الأنماط الـ16</a>
-    <a href="coaches.html">الكوتشات الأذكياء</a>
-    <a href="plans.html">باقات الاشتراك</a>
-    <a href="about.html">من نحن</a>
+    <a href="types.html">الأنماط الـ16</a>
+    <a href="plans.html">الباقات</a>
     <a href="contact.html">التواصل</a>
   </nav>
 </header>
 
-<section class="section">
-  <div class="title">اختبار MBTI تفاعلي</div>
-  <div class="subtitle">
-    اختبار مبسّط للناشئين من 12 إلى 18 سنة — أجب عن مواقف من حياتك اليومية واكتشف نمطك من بين 16 نمطاً عالمياً.
+<div class="container">
+
+  <!-- السؤال 1 -->
+  <div class="question" data-dimension="EI">
+    <h3>1 — في وقت الفراغ، تحب:</h3>
+    <div class="option" data-value="E">أجلس مع أصحابي وأسولف</div>
+    <div class="option" data-value="I">أجلس لحالي وأسوي شيء يعجبني</div>
   </div>
 
-  <a class="btn-main" href="#">ابدأ الاختبار الآن</a>
-
-  <div class="cards">
-    <div class="card">
-      <h3>12 سؤال تفاعلي</h3>
-      <p>مواقف من حياتك اليومية</p>
-    </div>
-
-    <div class="card">
-      <h3>16 نمطاً</h3>
-      <p>تحليل كامل لشخصيتك</p>
-    </div>
-
-    <div class="card">
-      <h3>100+ مهنة مستقبلية</h3>
-      <p>اكتشف طريقك</p>
-    </div>
+  <!-- السؤال 2 -->
+  <div class="question" data-dimension="SN">
+    <h3>2 — لو عندك مشروع في المدرسة، تختار:</h3>
+    <div class="option" data-value="S">شيء واضح وخطواته معروفة</div>
+    <div class="option" data-value="N">فكرة جديدة ومختلفة حتى لو صعبة</div>
   </div>
-</section>
 
-<section class="section">
-  <div class="title">كيف يعمل؟</div>
-  <div class="subtitle">ثلاث خطوات بسيطة</div>
-
-  <div class="cards">
-    <div class="card">
-      <h3>1 — أجب عن مواقف يومية</h3>
-      <p>اختر ما يناسبك بصدق من مواقف المدرسة والبيت والأصدقاء.</p>
-    </div>
-
-    <div class="card">
-      <h3>2 — نحلّل إجاباتك</h3>
-      <p>نقارن إجاباتك مع 16 نمطاً عالمياً ونحسب نمطك بدقة.</p>
-    </div>
-
-    <div class="card">
-      <h3>3 — اكتشف نفسك</h3>
-      <p>اقرأ نقاط قوتك ومهنك المستقبلية ومشاهير بنمطك.</p>
-    </div>
+  <!-- السؤال 3 -->
+  <div class="question" data-dimension="TF">
+    <h3>3 — لو صديقك زعلان، تتصرف:</h3>
+    <div class="option" data-value="T">أعطيه حل للمشكلة</div>
+    <div class="option" data-value="F">أسمع له وأواسيه</div>
   </div>
-</section>
 
-<footer>
-  <p>© 2026 أكاديمية الصغار للابتكار — جميع الحقوق محفوظة</p>
-  <p><a href="contact.html">تواصل معنا</a></p>
-</footer>
+  <!-- السؤال 4 -->
+  <div class="question" data-dimension="JP">
+    <h3>4 — لو عندك واجب، تسويه:</h3>
+    <div class="option" data-value="J">أول ما أوصل البيت</div>
+    <div class="option" data-value="P">بعدين لما أحس إني جاهز</div>
+  </div>
+
+  <a class="btn" onclick="calculate()">اظهار النتيجة</a>
+
+  <div id="result"></div>
+
+</div>
+
+<script>
+  let answers = {};
+
+  document.querySelectorAll(".option").forEach(option => {
+    option.addEventListener("click", function() {
+      let parent = option.parentElement;
+      let dimension = parent.getAttribute("data-dimension");
+      answers[dimension] = option.getAttribute("data-value");
+
+      parent.querySelectorAll(".option").forEach(o => o.style.background = "#ffefc2");
+      option.style.background = "#ffe08a";
+    });
+  });
+
+  function calculate() {
+    if (Object.keys(answers).length < 4) {
+      alert("جاوب على كل الأسئلة أولاً");
+      return;
+    }
+
+    let type = answers["EI"] + answers["SN"] + answers["TF"] + answers["JP"];
+    let resultDiv = document.getElementById("result");
+
+    resultDiv.style.display = "block";
+    resultDiv.innerHTML = `
+      نمط شخصيتك هو: <strong>${type}</strong><br><br>
+      <a class="btn" href="${type}.html">اذهب لصفحة نمطك</a>
+    `;
+  }
+</script>
 
 </body>
 </html>
