@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>اختبار MBTI</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+  <section>
+    <h2>اختبار MBTI للناشئين</h2>
+    <p>هنا يكون شرح الاختبار وطريقة الإجابة، أو رابط الاختبار الفعلي إذا كان موجود في منصة أخرى.</p>
+    <a href="../index.html" class="btn-main">العودة للصفحة الرئيسية</a>
+  </section>
+</body>
+</html>
