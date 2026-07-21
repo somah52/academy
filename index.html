@@ -1,48 +1,129 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>أكاديمية الصغار</title>
-  <link rel="stylesheet" href="styles/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أكاديمية الصغار للابتكار</title>
+
+<style>
+/* الهوية الفاخرة */
+body {
+  margin: 0;
+  font-family: "Tajawal", sans-serif;
+  background: #0a0a0a;
+  color: #e6e6e6;
+}
+
+/* الهيدر */
+header {
+  padding: 50px 20px;
+  text-align: center;
+  background: radial-gradient(circle at top, #0f0f0f, #000);
+  border-bottom: 1px solid rgba(0,255,255,0.15);
+  box-shadow: 0 0 40px rgba(0,255,255,0.1);
+}
+
+header h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #00eaff;
+  text-shadow: 0 0 25px rgba(0,255,255,0.5);
+}
+
+header p {
+  font-size: 20px;
+  opacity: 0.8;
+}
+
+/* الأقسام */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+section {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(0,255,255,0.15);
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 35px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0,255,255,0.08);
+  transition: 0.3s;
+}
+
+section:hover {
+  box-shadow: 0 0 35px rgba(0,255,255,0.15);
+}
+
+section h2 {
+  color: #00eaff;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+/* الأزرار */
+.btn {
+  display: inline-block;
+  background: #00eaff;
+  color: #000;
+  padding: 14px 26px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 20px rgba(0,255,255,0.4);
+}
+
+.btn:hover {
+  background: #00bcd4;
+  box-shadow: 0 0 30px rgba(0,255,255,0.6);
+}
+
+/* الروابط */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>أكاديمية الصغار</h1>
-  <p>اختبارات – بوتات – أنماط الشخصية – باقات تطوير</p>
-
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="types/types.html">الأنماط</a>
-    <a href="package/packages.html">الباقات</a>
-    <a href="bots/bots.html">البوتات</a>
-    <a href="faq.html">الأسئلة الشائعة</a>
-  </nav>
+  <h1>أكاديمية الصغار للابتكار</h1>
+  <p>منصة تعليمية للناشئين 12–18 لاكتشاف الشخصية وتطوير المهارات</p>
 </header>
 
-<article>
+<div class="container">
+
   <section>
-    <h2>مرحبًا بك في أكاديمية الصغار</h2>
-    <p>هنا تبدأ رحلتك في اكتشاف شخصيتك وتطوير مهاراتك.</p>
-    <a class="btn-main" href="mbti/test.html">ابدأ اختبار الشخصية</a>
+    <h2>ابدأ رحلتك</h2>
+    <p>اختبر شخصيتك، اكتشف نمطك، ادخل عالمك الخاص، وتعرّف على نقاط قوتك.</p>
+
+    <div class="links">
+      <a class="btn" href="MBTI/test.html">ابدأ اختبار MBTI</a>
+      <a class="btn" href="types/types.html">الأنماط الـ16</a>
+      <a class="btn" href="bots/bots.html">البوتات الثلاثة</a>
+      <a class="btn" href="package/packages.html">الباقات</a>
+    </div>
   </section>
 
   <section>
     <h2>ماذا نقدم؟</h2>
-    <ul>
-      <li>اختبار MBTI للناشئين</li>
-      <li>صفحات الأنماط الـ16</li>
-      <li>بوتات التخطيط والتواصل والذكاء العاطفي</li>
-      <li>باقات تطوير شخصية متقدمة</li>
-    </ul>
+    <p>اختبار MBTI للناشئين – صفحات الأنماط – بوتات التخطيط والتواصل والذكاء العاطفي – باقات تطوير شخصية.</p>
   </section>
-</article>
 
-<footer>
-  <p>© 2026 أكاديمية الصغار — جميع الحقوق محفوظة</p>
-</footer>
+  <section>
+    <h2>لماذا أكاديمية الصغار؟</h2>
+    <p>لأننا نقدّم تجربة تعليمية حديثة، ممتعة، وفاخرة تعتمد على الذكاء الاصطناعي.</p>
+  </section>
+
+</div>
 
 </body>
 </html>
