@@ -1,10 +1,11 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><link rel="stylesheet" href="../styles/test.css">
+<head>
+<link rel="stylesheet" href="../styles/test.css">
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>اختبار MBTI للناشئين</title>
+<title>أكاديمية الصغار للابتكار – اختبار MBTI</title>
 
 <style>
   body {
@@ -14,6 +15,7 @@
     color: #333;
   }
 
+  /* الهيدر الجديد */
   header {
     background: linear-gradient(135deg, #ffb347, #ffcc33);
     padding: 25px;
@@ -22,26 +24,9 @@
     border-radius: 0 0 25px 25px;
   }
 
-  nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 15px;
-  }
-
-  nav a {
-    color: #222;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 14px;
-    border-radius: 8px;
-    background: rgba(255,255,255,0.6);
-    transition: 0.3s;
-  }
-
-  nav a:hover {
-    background: #ffe08a;
+  header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
   }
 
   .container {
@@ -50,7 +35,7 @@
     padding: 30px 20px;
   }
 
-  .question {
+  section {
     background: #ffffff;
     padding: 20px;
     border-radius: 15px;
@@ -58,8 +43,12 @@
     margin-bottom: 25px;
   }
 
-  .question h3 {
-    margin-bottom: 15px;
+  .question {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
   }
 
   .option {
@@ -104,65 +93,73 @@
 </style>
 </head>
 
-<body><img src="../IMAGES/test_how_it_works.png">
+<body>
 
-<section class="how-test-works">
-    <h2>كيف يعمل الاختبار؟</h2>
-
-    <p>الاختبار بسيط وممتع، ويتكوّن من ثلاث خطوات واضحة تساعدك على اكتشاف نمط شخصيتك بدقة:</p>
-
-    <ol>
-        <li>جاوب على 4 أسئلة قصيرة — أسئلة خفيفة من حياتك اليومية، وكل سؤال يعطي جزء من نمطك.</li>
-        <li>شاهد نتيجتك مباشرة — بعد آخر سؤال، يظهر لك نمطك من بين الأنماط الـ16.</li>
-        <li>ادخل عالمك الخاص — تقدر تشوف عالمك، صفاتك، نقاط قوتك، ونصائح تناسب شخصيتك.</li>
-    </ol>
-</section>
-
+<!-- الهيدر الجديد -->
 <header>
-  <h1>اختبار MBTI للناشئين</h1>
-  <p>4 أسئلة فقط — اكتشف نمط شخصيتك بسرعة!</p>
-
-  <nav>
-    <a href="../index.html">الرئيسية</a>
-    <a href="../types/types.html">الأنماط الـ16</a>
-    <a href="plans.html">الباقات</a>
-    <a href="contact.html">التواصل</a>
-  </nav>
+  <h1>أكاديمية الصغار للابتكار</h1>
+  <p>اختبار الأنماط الشخصية للناشئين</p>
 </header>
 
 <div class="container">
 
-  <!-- السؤال 1 -->
-  <div class="question" data-dimension="EI">
-    <h3>1 — في وقت الفراغ، تحب:</h3>
-    <div class="option" data-value="E">أجلس مع أصحابي وأسولف</div>
-    <div class="option" data-value="I">أجلس لحالي وأسوي شيء يعجبني</div>
+  <!-- وصف الاختبار -->
+  <section>
+    <h2>عن الاختبار</h2>
+    <p>اختبار MBTI يساعدك على اكتشاف نمط شخصيتك من خلال أربعة أسئلة بسيطة من حياتك اليومية.</p>
+  </section>
+
+  <!-- الأنماط الـ16 -->
+  <section>
+    <h2>الأنماط الشخصية الـ16</h2>
+    <p>تنقسم الأنماط إلى أربع مجموعات رئيسية، وكل نمط له صفاته الخاصة.</p>
+  </section>
+
+  <!-- طريقة عمل الاختبار -->
+  <section>
+    <h2>كيف يعمل الاختبار؟</h2>
+    <ol>
+      <li>جاوب على 4 أسئلة قصيرة.</li>
+      <li>شاهد نتيجتك مباشرة.</li>
+      <li>ادخل عالمك الخاص وتعرّف على صفاتك.</li>
+    </ol>
+  </section>
+
+  <!-- زر البدء -->
+  <a class="btn" onclick="document.getElementById('questions').scrollIntoView()">ابدأ الاختبار</a>
+
+  <!-- الأسئلة -->
+  <div id="questions">
+
+    <div class="question" data-dimension="EI">
+      <h3>1 — في وقت الفراغ، تحب:</h3>
+      <div class="option" data-value="E">أجلس مع أصحابي وأسولف</div>
+      <div class="option" data-value="I">أجلس لحالي وأسوي شيء يعجبني</div>
+    </div>
+
+    <div class="question" data-dimension="SN">
+      <h3>2 — لو عندك مشروع في المدرسة، تختار:</h3>
+      <div class="option" data-value="S">شيء واضح وخطواته معروفة</div>
+      <div class="option" data-value="N">فكرة جديدة ومختلفة حتى لو صعبة</div>
+    </div>
+
+    <div class="question" data-dimension="TF">
+      <h3>3 — لو صديقك زعلان، تتصرف:</h3>
+      <div class="option" data-value="T">أعطيه حل للمشكلة</div>
+      <div class="option" data-value="F">أسمع له وأواسيه</div>
+    </div>
+
+    <div class="question" data-dimension="JP">
+      <h3>4 — لو عندك واجب، تسويه:</h3>
+      <div class="option" data-value="J">أول ما أوصل البيت</div>
+      <div class="option" data-value="P">بعدين لما أحس إني جاهز</div>
+    </div>
+
+    <a class="btn" onclick="calculate()">اظهار النتيجة</a>
+
+    <div id="result"></div>
+
   </div>
-
-  <!-- السؤال 2 -->
-  <div class="question" data-dimension="SN">
-    <h3>2 — لو عندك مشروع في المدرسة، تختار:</h3>
-    <div class="option" data-value="S">شيء واضح وخطواته معروفة</div>
-    <div class="option" data-value="N">فكرة جديدة ومختلفة حتى لو صعبة</div>
-  </div>
-
-  <!-- السؤال 3 -->
-  <div class="question" data-dimension="TF">
-    <h3>3 — لو صديقك زعلان، تتصرف:</h3>
-    <div class="option" data-value="T">أعطيه حل للمشكلة</div>
-    <div class="option" data-value="F">أسمع له وأواسيه</div>
-  </div>
-
-  <!-- السؤال 4 -->
-  <div class="question" data-dimension="JP">
-    <h3>4 — لو عندك واجب، تسويه:</h3>
-    <div class="option" data-value="J">أول ما أوصل البيت</div>
-    <div class="option" data-value="P">بعدين لما أحس إني جاهز</div>
-  </div>
-
-  <a class="btn" onclick="calculate()">اظهار النتيجة</a>
-
-  <div id="result"></div>
 
 </div>
 
