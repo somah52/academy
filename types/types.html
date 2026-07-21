@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الأنماط الشخصية الـ16</title>
+<title>أكاديمية الصغار للابتكار</title>
 
 <style>
+/* الهوية الفاخرة */
 body {
   margin: 0;
   font-family: "Tajawal", sans-serif;
@@ -15,7 +16,7 @@ body {
 
 /* الهيدر */
 header {
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
   background: radial-gradient(circle at top, #0f0f0f, #000);
   border-bottom: 1px solid rgba(0,255,255,0.15);
@@ -23,74 +24,54 @@ header {
 }
 
 header h1 {
-  font-size: 42px;
+  font-size: 48px;
   font-weight: bold;
   color: #00eaff;
-  text-shadow: 0 0 20px rgba(0,255,255,0.4);
+  text-shadow: 0 0 25px rgba(0,255,255,0.5);
 }
 
 header p {
-  font-size: 18px;
+  font-size: 20px;
   opacity: 0.8;
 }
 
-/* الحاوية */
+/* الأقسام */
 .container {
-  max-width: 1100px;
+  max-width: 900px;
   margin: auto;
   padding: 40px 20px;
 }
 
-/* شبكة الأنماط */
-.types-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 25px;
-}
-
-/* بطاقة النمط */
-.type-card {
+section {
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(0,255,255,0.15);
-  padding: 20px;
-  border-radius: 18px;
-  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 35px;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 25px rgba(0,255,255,0.08);
   transition: 0.3s;
 }
 
-.type-card:hover {
+section:hover {
   box-shadow: 0 0 35px rgba(0,255,255,0.15);
-  transform: translateY(-5px);
 }
 
-/* صورة الأفاتار */
-.type-card img {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-  border: 2px solid rgba(0,255,255,0.3);
-  box-shadow: 0 0 15px rgba(0,255,255,0.4);
-}
-
-/* اسم النمط */
-.type-card h3 {
+section h2 {
   color: #00eaff;
-  margin-bottom: 10px;
-  font-size: 22px;
+  font-size: 30px;
+  margin-bottom: 15px;
 }
 
-/* زر الدخول */
+/* الأزرار */
 .btn {
   display: inline-block;
   background: #00eaff;
   color: #000;
-  padding: 10px 20px;
-  border-radius: 10px;
+  padding: 14px 26px;
+  border-radius: 12px;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   transition: 0.3s;
   box-shadow: 0 0 20px rgba(0,255,255,0.4);
@@ -100,121 +81,126 @@ header p {
   background: #00bcd4;
   box-shadow: 0 0 30px rgba(0,255,255,0.6);
 }
+
+/* الروابط */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* ----------------------------- */
+/* قسم المجموعات الأربع */
+/* ----------------------------- */
+
+.groups-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.group-box {
+  padding: 40px 20px;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(255,255,255,0.08);
+  transition: 0.4s;
+  transform: translateY(0);
+}
+
+/* حركة */
+.group-box:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 35px rgba(255,255,255,0.2);
+}
+
+/* ألوان المجموعات */
+.analysts { border-color: #a855f7; box-shadow: 0 0 20px #a855f7aa; }
+.diplomats { border-color: #22c55e; box-shadow: 0 0 20px #22c55eaa; }
+.sentinels { border-color: #facc15; box-shadow: 0 0 20px #facc15aa; }
+.explorers { border-color: #fb923c; box-shadow: 0 0 20px #fb923caa; }
+
+.group-box h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.group-box p {
+  opacity: 0.9;
+  font-size: 18px;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>الأنماط الشخصية الـ16</h1>
-  <p>اختر نمطك واستكشف عالمك الخاص</p>
+  <h1>أكاديمية الصغار للابتكار</h1>
+  <p>منصة تعليمية للناشئين 12–18 لاكتشاف الشخصية وتطوير المهارات</p>
 </header>
 
 <div class="container">
 
-  <div class="types-grid">
+  <!-- قسم المجموعات الأربع -->
+  <section>
+    <h2>المجموعات الرئيسية للأنماط</h2>
 
-    <!-- المحللون -->
-    <div class="type-card">
-      <img src="../avatars/INTJ.png" alt="INTJ Avatar">
-      <h3>INTJ</h3>
-      <a class="btn" href="INTJ.html">عرض النمط</a>
+    <div class="groups-container">
+
+      <a href="types/analysts.html" class="group-box analysts">
+        <h2>المحللون</h2>
+        <p>INTJ – INTP – ENTJ – ENTP</p>
+      </a>
+
+      <a href="types/diplomats.html" class="group-box diplomats">
+        <h2>الداعمون</h2>
+        <p>INFJ – INFP – ENFJ – ENFP</p>
+      </a>
+
+      <a href="types/sentinels.html" class="group-box sentinels">
+        <h2>المحافظون</h2>
+        <p>ISTJ – ISFJ – ESTJ – ESFJ</p>
+      </a>
+
+      <a href="types/explorers.html" class="group-box explorers">
+        <h2>المغامرون</h2>
+        <p>ISTP – ISFP – ESTP – ESFP</p>
+      </a>
+
     </div>
+  </section>
 
-    <div class="type-card">
-      <img src="../avatars/INTP.png" alt="INTP Avatar">
-      <h3>INTP</h3>
-      <a class="btn" href="INTP.html">عرض النمط</a>
+  <section>
+    <h2>ابدأ رحلتك</h2>
+    <p>اختبر شخصيتك، اكتشف نمطك، ادخل عالمك الخاص، وتعرّف على نقاط قوتك.</p>
+
+    <div class="links">
+      <a class="btn" href="MBTI/test.html">ابدأ اختبار MBTI</a>
+      <a class="btn" href="types/types.html">الأنماط الـ16</a>
+      <a class="btn" href="bots/bots.html">البوتات الثلاثة</a>
+      <a class="btn" href="package/packages.html">الباقات</a>
     </div>
+  </section>
 
-    <div class="type-card">
-      <img src="../avatars/ENTJ.png" alt="ENTJ Avatar">
-      <h3>ENTJ</h3>
-      <a class="btn" href="ENTJ.html">عرض النمط</a>
-    </div>
+  <section>
+    <h2>ماذا نقدم؟</h2>
+    <p>اختبار MBTI للناشئين – صفحات الأنماط – بوتات التخطيط والتواصل والذكاء العاطفي – باقات تطوير شخصية.</p>
+  </section>
 
-    <div class="type-card">
-      <img src="../avatars/ENTP.png" alt="ENTP Avatar">
-      <h3>ENTP</h3>
-      <a class="btn" href="ENTP.html">عرض النمط</a>
-    </div>
-
-    <!-- الداعمون -->
-    <div class="type-card">
-      <img src="../avatars/INFJ.png" alt="INFJ Avatar">
-      <h3>INFJ</h3>
-      <a class="btn" href="INFJ.html">عرض النمط</a>
-    </div>
-
-    <div class="type-card">
-      <img src="../avatars/INFP.png" alt="INFP Avatar">
-      <h3>INFP</h3>
-      <a class="btn" href="INFP.html">عرض النمط</a>
-    </div>
-
-    <div class="type-card">
-      <img src="../avatars/ENFJ.png" alt="ENFJ Avatar">
-      <h3>ENFJ</h3>
-      <a class="btn" href="ENFJ.html">عرض النمط</a>
-    </div>
-
-    <div class="type-card">
-      <img src="../avatars/ENFP.png" alt="ENFP Avatar">
-      <h3>ENFP</h3>
-      <a class="btn" href="ENFP.html">عرض النمط</a>
-    </div>
-
-    <!-- المحافظون -->
-    <div class="type-card">
-      <img src="../avatars/ISTJ.png" alt="ISTJ Avatar">
-      <h3>ISTJ</h3>
-      <a class="btn" href="ISTJ.html">عرض النمط</a>
-    </div>
-
-    <div class="type-card">
-      <img src="../avatars/ISFJ.png" alt="ISFJ Avatar">
-      <h3>ISFJ</h3>
-      <a class="btn" href="ISFJ.html">عرض النمط</a>
-    </div>
-
-    <div class="type-card">
-      <img src="../avatars/ESTJ.png" alt="ESTJ Avatar">
-      <h3>ESTJ</h3>
-      <a class="btn" href="ESTJ.html">عرض النمط</a>
-    </div>
-
-    <div class="type-card">
-      <img src="../avatars/ESFJ.png" alt="ESFJ Avatar">
-      <h3>ESFJ</h3>
-      <a class="btn" href="ESFJ.html">عرض النمط</a>
-    </div>
-
-    <!-- المغامرون -->
-    <div class="type-card">
-      <img src="../avatars/ISTP.png" alt="ISTP Avatar">
-      <h3>ISTP</h3>
-      <a class="btn" href="ISTP.html">عرض النمط</a>
-    </div>
-
-    <div class="type-card">
-      <img src="../avatars/ISFP.png" alt="ISFP Avatar">
-      <h3>ISFP</h3>
-      <a class="btn" href="ISFP.html">عرض النمط</a>
-    </div>
-
-    <div class="type-card">
-      <img src="../avatars/ESTP.png" alt="ESTP Avatar">
-      <h3>ESTP</h3>
-      <a class="btn" href="ESTP.html">عرض النمط</a>
-    </div>
-
-    <div class="type-card">
-      <img src="../avatars/ESFP.png" alt="ESFP Avatar">
-      <h3>ESFP</h3>
-      <a class="btn" href="ESFP.html">عرض النمط</a>
-    </div>
-
-  </div>
+  <section>
+    <h2>لماذا أكاديمية الصغار؟</h2>
+    <p>لأننا نقدّم تجربة تعليمية حديثة، ممتعة، وفاخرة تعتمد على الذكاء الاصطناعي.</p>
+  </section>
 
 </div>
 
