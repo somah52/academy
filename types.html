@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الأنماط الـ16</title>
+
+<style>
+  body {
+    font-family: "Tajawal", sans-serif;
+    margin: 0;
+    background: #fff9e6;
+    color: #333;
+  }
+
+  header {
+    background: linear-gradient(135deg, #6a5af9, #8f7bff);
+    padding: 25px;
+    color: white;
+    text-align: center;
+    border-radius: 0 0 25px 25px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    background: rgba(255,255,255,0.2);
+  }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 20px;
+  }
+
+  .group {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+  }
+
+  .group h2 {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #222;
+  }
+
+  .analysts { background: #e8e3ff; }
+  .diplomats { background: #e6ffe8; }
+  .sentinels { background: #fff4cc; }
+  .explorers { background: #ffe6d1; }
+
+  .types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .type-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .type-card:hover {
+    background: #ffe08a;
+  }
+
+  footer {
+    background: #222;
+    color: white;
+    padding: 30px;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  footer a {
+    color: #b8b8ff;
+    text-decoration: none;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>الأنماط الـ16</h1>
+  <p>اختر مجموعتك أو نمطك لتعرف المزيد</p>
+
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="mbti.html">الاختبار</a>
+    <a href="plans.html">الباقات</a>
+    <a href="contact.html">التواصل</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- المحللون -->
+  <div class="group analysts">
+    <h2>المحللون (Analysts)</h2>
+    <div class="types">
+      <div class="type-card" onclick="go('INTJ')">INTJ — المهندس</div>
+      <div class="type-card" onclick="go('INTP')">INTP — المفكر</div>
+      <div class="type-card" onclick="go('ENTJ')">ENTJ — القائد</div>
+      <div class="type-card" onclick="go('ENTP')">ENTP — المبدع</div>
+    </div>
+  </div>
+
+  <!-- الداعمون -->
+  <div class="group diplomats">
+    <h2>الداعمون (Diplomats)</h2>
+    <div class="types">
+      <div class="type-card" onclick="go('INFJ')">INFJ — المستشار</div>
+      <div class="type-card" onclick="go('INFP')">INFP — الوسيط</div>
+      <div class="type-card" onclick="go('ENFJ')">ENFJ — المعلم</div>
+      <div class="type-card" onclick="go('ENFP')">ENFP — الملهم</div>
+    </div>
+  </div>
+
+  <!-- المحافظون -->
+  <div class="group sentinels">
+    <h2>المحافظون (Sentinels)</h2>
+    <div class="types">
+      <div class="type-card" onclick="go('ISTJ')">ISTJ — اللوجستي</div>
+      <div class="type-card" onclick="go('ISFJ')">ISFJ — المدافع</div>
+      <div class="type-card" onclick="go('ESTJ')">ESTJ — المدير</div>
+      <div class="type-card" onclick="go('ESFJ')">ESFJ — القنصل</div>
+    </div>
+  </div>
+
+  <!-- المغامرون -->
+  <div class="group explorers">
+    <h2>المغامرون (Explorers)</h2>
+    <div class="types">
+      <div class="type-card" onclick="go('ISTP')">ISTP — الحرفي</div>
+      <div class="type-card" onclick="go('ISFP')">ISFP — الفنان</div>
+      <div class="type-card" onclick="go('ESTP')">ESTP — المسلي</div>
+      <div class="type-card" onclick="go('ESFP')">ESFP — المؤدي</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 أكاديمية الصغار للابتكار — جميع الحقوق محفوظة</p>
+  <p><a href="contact.html">تواصل معنا</a></p>
+</footer>
+
+<script>
+  function go(type) {
+    window.location.href = type + ".html";
+  }
+</script>
+
+</body>
+</html>
