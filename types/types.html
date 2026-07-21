@@ -3,180 +3,217 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>الأنماط الـ16</title>
+<title>الأنماط الشخصية الـ16</title>
 
 <style>
-  body {
-    font-family: "Tajawal", sans-serif;
-    margin: 0;
-    background: #fff9e6;
-    color: #333;
-  }
+body {
+  margin: 0;
+  font-family: "Tajawal", sans-serif;
+  background: #0a0a0a;
+  color: #e6e6e6;
+}
 
-  header {
-    background: linear-gradient(135deg, #6a5af9, #8f7bff);
-    padding: 25px;
-    color: white;
-    text-align: center;
-    border-radius: 0 0 25px 25px;
-  }
+/* الهيدر */
+header {
+  padding: 40px 20px;
+  text-align: center;
+  background: radial-gradient(circle at top, #0f0f0f, #000);
+  border-bottom: 1px solid rgba(0,255,255,0.15);
+  box-shadow: 0 0 40px rgba(0,255,255,0.1);
+}
 
-  nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 15px;
-  }
+header h1 {
+  font-size: 42px;
+  font-weight: bold;
+  color: #00eaff;
+  text-shadow: 0 0 20px rgba(0,255,255,0.4);
+}
 
-  nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 8px 14px;
-    border-radius: 8px;
-    transition: 0.3s;
-  }
+header p {
+  font-size: 18px;
+  opacity: 0.8;
+}
 
-  nav a:hover {
-    background: rgba(255,255,255,0.2);
-  }
+/* الحاوية */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
 
-  .container {
-    max-width: 900px;
-    margin: auto;
-    padding: 30px 20px;
-  }
+/* شبكة الأنماط */
+.types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 25px;
+}
 
-  .group {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin-bottom: 30px;
-  }
+/* بطاقة النمط */
+.type-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(0,255,255,0.15);
+  padding: 20px;
+  border-radius: 18px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(0,255,255,0.08);
+  transition: 0.3s;
+}
 
-  .group h2 {
-    margin-bottom: 15px;
-    padding: 10px;
-    border-radius: 10px;
-    color: #222;
-  }
+.type-card:hover {
+  box-shadow: 0 0 35px rgba(0,255,255,0.15);
+  transform: translateY(-5px);
+}
 
-  .analysts { background: #e8e3ff; }
-  .diplomats { background: #e6ffe8; }
-  .sentinels { background: #fff4cc; }
-  .explorers { background: #ffe6d1; }
+/* صورة الأفاتار */
+.type-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 2px solid rgba(0,255,255,0.3);
+  box-shadow: 0 0 15px rgba(0,255,255,0.4);
+}
 
-  .types {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-  }
+/* اسم النمط */
+.type-card h3 {
+  color: #00eaff;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
 
-  .type-card {
-    background: white;
-    padding: 15px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    cursor: pointer;
-    transition: 0.3s;
-  }
+/* زر الدخول */
+.btn {
+  display: inline-block;
+  background: #00eaff;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 20px rgba(0,255,255,0.4);
+}
 
-  .type-card:hover {
-    background: #ffe08a;
-  }
-
-  footer {
-    background: #222;
-    color: white;
-    padding: 30px;
-    margin-top: 40px;
-    text-align: center;
-  }
-
-  footer a {
-    color: #b8b8ff;
-    text-decoration: none;
-  }
+.btn:hover {
+  background: #00bcd4;
+  box-shadow: 0 0 30px rgba(0,255,255,0.6);
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>الأنماط الـ16</h1>
-  <p>اختر مجموعتك أو نمطك لتعرف المزيد</p>
-
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="mbti.html">الاختبار</a>
-    <a href="plans.html">الباقات</a>
-    <a href="contact.html">التواصل</a>
-  </nav>
+  <h1>الأنماط الشخصية الـ16</h1>
+  <p>اختر نمطك واستكشف عالمك الخاص</p>
 </header>
 
 <div class="container">
 
-  <!-- المحللون -->
-  <div class="group analysts">
-    <h2>المحللون (Analysts)</h2>
-    <div class="types">
-      <div class="type-card" onclick="go('INTJ')">INTJ — المهندس</div>
-      <div class="type-card" onclick="go('INTP')">INTP — المفكر</div>
-      <div class="type-card" onclick="go('ENTJ')">ENTJ — القائد</div>
-      <div class="type-card" onclick="go('ENTP')">ENTP — المبدع</div>
-    </div>
-  </div>
+  <div class="types-grid">
 
-  <!-- الداعمون -->
-  <div class="group diplomats">
-    <h2>الداعمون (Diplomats)</h2>
-    <div class="types">
-      <div class="type-card" onclick="go('INFJ')">INFJ — المستشار</div>
-      <div class="type-card" onclick="go('INFP')">INFP — الوسيط</div>
-      <div class="type-card" onclick="go('ENFJ')">ENFJ — المعلم</div>
-      <div class="type-card" onclick="go('ENFP')">ENFP — الملهم</div>
+    <!-- بطاقة النمط (كرريها لكل نمط) -->
+    <div class="type-card">
+      <img src="../avatars/INTJ.png" alt="INTJ Avatar">
+      <h3>INTJ</h3>
+      <a class="btn" href="INTJ.html">عرض النمط</a>
     </div>
-  </div>
 
-  <!-- المحافظون -->
-  <div class="group sentinels">
-    <h2>المحافظون (Sentinels)</h2>
-    <div class="types">
-      <div class="type-card" onclick="go('ISTJ')">ISTJ — اللوجستي</div>
-      <div class="type-card" onclick="go('ISFJ')">ISFJ — المدافع</div>
-      <div class="type-card" onclick="go('ESTJ')">ESTJ — المدير</div>
-      <div class="type-card" onclick="go('ESFJ')">ESFJ — القنصل</div>
+    <div class="type-card">
+      <img src="../avatars/INTP.png" alt="INTP Avatar">
+      <h3>INTP</h3>
+      <a class="btn" href="INTP.html">عرض النمط</a>
     </div>
-  </div>
 
-  <!-- المغامرون -->
-  <div class="group explorers">
-    <h2>المغامرون (Explorers)</h2>
-    <div class="types">
-      <div class="type-card" onclick="go('ISTP')">ISTP — الحرفي</div>
-      <div class="type-card" onclick="go('ISFP')">ISFP — الفنان</div>
-      <div class="type-card" onclick="go('ESTP')">ESTP — المسلي</div>
-      <div class="type-card" onclick="go('ESFP')">ESFP — المؤدي</div>
+    <div class="type-card">
+      <img src="../avatars/ENTJ.png" alt="ENTJ Avatar">
+      <h3>ENTJ</h3>
+      <a class="btn" href="ENTJ.html">عرض النمط</a>
     </div>
+
+    <div class="type-card">
+      <img src="../avatars/ENTP.png" alt="ENTP Avatar">
+      <h3>ENTP</h3>
+      <a class="btn" href="ENTP.html">عرض النمط</a>
+    </div>
+
+    <div class="type-card">
+      <img src="../avatars/INFJ.png" alt="INFJ Avatar">
+      <h3>INFJ</h3>
+      <a class="btn" href="INFJ.html">عرض النمط</a>
+    </div>
+
+    <div class="type-card">
+      <img src="../avatars/INFP.png" alt="INFP Avatar">
+      <h3>INFP</h3>
+      <a class="btn" href="INFP.html">عرض النمط</a>
+    </div>
+
+    <div class="type-card">
+      <img src="../avatars/ENFJ.png" alt="ENFJ Avatar">
+      <h3>ENFJ</h3>
+      <a class="btn" href="ENFJ.html">عرض النمط</a>
+    </div>
+
+    <div class="type-card">
+      <img src="../avatars/ENFP.png" alt="ENFP Avatar">
+      <h3>ENFP</h3>
+      <a class="btn" href="ENFP.html">عرض النمط</a>
+    </div>
+
+    <div class="type-card">
+      <img src="../avatars/ISTJ.png" alt="ISTJ Avatar">
+      <h3>ISTJ</h3>
+      <a class="btn" href="ISTJ.html">عرض النمط</a>
+    </div>
+
+    <div class="type-card">
+      <img src="../avatars/ISFJ.png" alt="ISFJ Avatar">
+      <h3>ISFJ</h3>
+      <a class="btn" href="ISFJ.html">عرض النمط</a>
+    </div>
+
+    <div class="type-card">
+      <img src="../avatars/ESTJ.png" alt="ESTJ Avatar">
+      <h3>ESTJ</h3>
+      <a class="btn" href="ESTJ.html">عرض النمط</a>
+    </div>
+
+    <div class="type-card">
+      <img src="../avatars/ESFJ.png" alt="ESFJ Avatar">
+      <h3>ESFJ</h3>
+      <a class="btn" href="ESFJ.html">عرض النمط</a>
+    </div>
+
+    <div class="type-card">
+      <img src="../avatars/ISTP.png" alt="ISTP Avatar">
+      <h3>ISTP</h3>
+      <a class="btn" href="ISTP.html">عرض النمط</a>
+    </div>
+
+    <div class="type-card">
+      <img src="../avatars/ISFP.png" alt="ISFP Avatar">
+      <h3>ISFP</h3>
+      <a class="btn" href="ISFP.html">عرض النمط</a>
+    </div>
+
+    <div class="type-card">
+      <img src="../avatars/ESTP.png" alt="ESTP Avatar">
+      <h3>ESTP</h3>
+      <a class="btn" href="ESTP.html">عرض النمط</a>
+    </div>
+
+    <div class="type-card">
+      <img src="../avatars/ESFP.png" alt="ESFP Avatar">
+      <h3>ESFP</h3>
+      <a class="btn" href="ESFP.html">عرض النمط</a>
+    </div>
+
   </div>
 
 </div>
 
-<footer>
-  <p>© 2026 أكاديمية الصغار للابتكار — جميع الحقوق محفوظة</p>
-  <p><a href="contact.html">تواصل معنا</a></p>
-</footer>
-
-<script>
-  function go(type) {
-    window.location.href = type + ".html";
-  }
-</script>
-
 </body>
 </html>
-
