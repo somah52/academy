@@ -89,6 +89,56 @@ section h2 {
   gap: 15px;
   margin-top: 20px;
 }
+
+/* ----------------------------- */
+/* قسم المجموعات الأربع */
+/* ----------------------------- */
+
+.groups-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.group-box {
+  padding: 40px 20px;
+  border-radius: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(255,255,255,0.08);
+  transition: 0.4s;
+  transform: translateY(0);
+}
+
+/* حركة */
+.group-box:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 35px rgba(255,255,255,0.2);
+}
+
+/* ألوان المجموعات */
+.analysts { border-color: #a855f7; box-shadow: 0 0 20px #a855f7aa; }
+.diplomats { border-color: #22c55e; box-shadow: 0 0 20px #22c55eaa; }
+.sentinels { border-color: #facc15; box-shadow: 0 0 20px #facc15aa; }
+.explorers { border-color: #fb923c; box-shadow: 0 0 20px #fb923caa; }
+
+.group-box h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.group-box p {
+  opacity: 0.9;
+  font-size: 18px;
+}
 </style>
 </head>
 
@@ -100,6 +150,35 @@ section h2 {
 </header>
 
 <div class="container">
+
+  <!-- قسم المجموعات الأربع -->
+  <section>
+    <h2>المجموعات الرئيسية للأنماط</h2>
+
+    <div class="groups-container">
+
+      <a href="types/analysts.html" class="group-box analysts">
+        <h2>المحللون</h2>
+        <p>INTJ – INTP – ENTJ – ENTP</p>
+      </a>
+
+      <a href="types/diplomats.html" class="group-box diplomats">
+        <h2>الداعمون</h2>
+        <p>INFJ – INFP – ENFJ – ENFP</p>
+      </a>
+
+      <a href="types/sentinels.html" class="group-box sentinels">
+        <h2>المحافظون</h2>
+        <p>ISTJ – ISFJ – ESTJ – ESFJ</p>
+      </a>
+
+      <a href="types/explorers.html" class="group-box explorers">
+        <h2>المغامرون</h2>
+        <p>ISTP – ISFP – ESTP – ESFP</p>
+      </a>
+
+    </div>
+  </section>
 
   <section>
     <h2>ابدأ رحلتك</h2>
